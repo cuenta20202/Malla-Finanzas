@@ -8,7 +8,6 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f5f9ff;
       margin: 0;
-      padding: 0;
     }
     header {
       background-color: #003366;
@@ -24,92 +23,16 @@
     h1 {
       font-size: 1.5rem;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(9, 1fr);
-      gap: 1rem;
-      padding: 1rem;
+    .toolbar {
+      text-align: right;
+      margin: 0.5rem 1rem;
     }
-    .semester {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 0.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .semester h2 {
-      text-align: center;
-      color: #003366;
-    }
-    .course {
-      background-color: #e3ecf8;
-      border-left: 5px solid #005baa;
-      border-radius: 6px;
-      margin: 0.5rem 0;
-      padding: 0.5rem;
+    .toolbar button {
+      background-color: #005baa;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
       cursor: pointer;
-      position: relative;
     }
-    .course.locked {
-      background-color: #f3f3f3;
-      border-left: 5px solid #ccc;
-      cursor: not-allowed;
-      color: #999;
-    }
-    .course.completed {
-      background-color: #c0e6c2;
-      border-left: 5px solid #2e7d32;
-      text-decoration: line-through;
-    }
-    .course[title]:hover::after {
-      content: attr(title);
-      position: absolute;
-      background: #333;
-      color: #fff;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      top: 100%;
-      left: 0;
-      white-space: nowrap;
-      margin-top: 4px;
-      z-index: 1000;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="https://www.usergioarboleda.edu.co/wp-content/uploads/2023/03/logo-sergio-arboleda-azul.png" alt="Logo Sergio Arboleda">
-    <h1>Plan de Estudios – Finanzas, Fintech y Comercio Exterior</h1>
-  </header>
-
-  <div class="grid" id="curriculum"></div>
-
-  <script>
-    const data = {
-      1: [
-        { id: 'mat1', name: 'Matemáticas Empresariales I' },
-        { id: 'mat2', name: 'Introducción a las Finanzas' },
-        { id: 'mat3', name: 'Lectura y Escritura Académica I' },
-        { id: 'mat4', name: 'Cátedra Rodrigo Noguera' }
-      ],
-      2: [
-        { id: 'mat5', name: 'Matemáticas Empresariales II', dependsOn: ['mat1'] },
-        { id: 'mat6', name: 'Contabilidad Financiera' },
-        { id: 'mat7', name: 'Lectura y Escritura Académica II', dependsOn: ['mat3'] },
-        { id: 'mat8', name: 'Gestión Contable' }
-      ],
-      3: [
-        { id: 'mat9', name: 'Probabilidad y Estadística' },
-        { id: 'mat10', name: 'Excel Avanzado para los Negocios' },
-        { id: 'mat11', name: 'Ética y Responsabilidad Social' },
-        { id: 'mat12', name: 'Taller de Resolución de Problemas' }
-      ],
-      4: [
-        { id: 'mat13', name: 'Marco Legal de los Negocios' },
-        { id: 'mat14', name: 'Gestión y Análisis de Nuevas Inversiones', dependsOn: ['mat2'] },
-        { id: 'mat15', name: 'Solidez y Rendimiento de la Organización' },
-        { id: 'mat16', name: 'Simuladores para los Negocios' }
-      ],
-      5: [
-        { id: 'mat17', name: 'Banca Digital y Medios de Pago' },
-        { id: 'mat18', name: 'Decis
+    .grid {
